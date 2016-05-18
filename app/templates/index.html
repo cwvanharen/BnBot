@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class="header">
+    <h2 class="title">IRIS Flower Prediction!</h2>
+  </section>
+  <hr />
+
+  <div class="content">
+    <h1>
+      {% if prediction %}
+      OMG It is a {{ prediction }}.
+      {% else %}
+        Please fill out the form below!
+      {% endif %}
+    </h1>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <div class="row">
+        <div class="three columns">
+          {{ form.sepal_length.label }} {{ form.sepal_length() }}
+        </div>
+        <div class="three columns">
+          {{ form.sepal_width.label }} {{ form.sepal_width() }}
+        </div>
+        <div class="three columns">
+          {{ form.petal_length.label }} {{ form.petal_length() }}
+        </div>
+        <div class="three columns">
+          {{ form.petal_width.label }} {{ form.petal_width() }}
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" class="button-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+{% endblock body %}
+
+{% block js %}
+  <script type="text/javascript">
+
+  </script>
+{% endblock js %}
