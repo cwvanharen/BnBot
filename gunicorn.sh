@@ -17,7 +17,7 @@ RUNDIR=$(dirname $SOCKFILE)
 test -d $RUNDIR || mkdir -p $RUNDIR
 
 # Start your unicorn
-exec gunicorn run:application -b 0.0.0.0:9000 \
+exec gunicorn run:application -b 127.0.0.1:9000 \
   --name $NAME \
   --workers $NUM_WORKERS \
   --log-level=debug \

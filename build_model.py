@@ -1,3 +1,5 @@
+import os
+
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import load_iris
 from sklearn.externals import joblib
@@ -14,4 +16,9 @@ if __name__ == "__main__":
     knn = KNeighborsClassifier(n_neighbors=3)  # replace with your own ML model here
     knn.fit(features, target)
 
-    joblib.dump(knn, 'models/iris_model.pkl')
+    _CUR_DIR = os.path.dirname(os.path.realpath(__file__))
+    _SERIALIZATION_DIR = os.path.join(_CUR_DIR, "models")
+    if not os.path.exists(_SERIALIZATION_DIR):
+        os.makedirs(_SERIALIZATION_DIR)
+
+    joblib.dump(knn, os.path.join(_SERIALIZATION_DIR, 'iris_model.pkl'))
