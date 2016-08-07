@@ -8,7 +8,7 @@ NUM_WORKERS=3
 echo "Starting $NAME"
 
 # activate the virtualenv
-source activate env
+source activate iris-app-env
 
 export PYTHONPATH=$APPDIR:$PYTHONPATH
 
