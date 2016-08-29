@@ -11,3 +11,5 @@ Other backends available are accessed by prefixing the url with:
 The code for the app is in the 'views.py' file.
 
 The code that generated the model used in the default backend is in the ipython notebook.
+
+The presentation is Fletcher.pdf
