@@ -1,5 +1,5 @@
 # BnBot
-A simple review summarizer using multiple backends.
+A simple Airbnb review summarizer using multiple backends.
 
 The default backend is accessed by dropping a url into the box.
 
