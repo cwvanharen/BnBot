@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config.from_object("app.config")
 
 # unpickle my model
-estimator = joblib.load('models/iris_model.pkl')
+tfidf_vec_5 = joblib.load('models/tfidf_vec_5.p')
 target_names = ['setosa', 'versicolor', 'virginica']
 
 from .views import *
